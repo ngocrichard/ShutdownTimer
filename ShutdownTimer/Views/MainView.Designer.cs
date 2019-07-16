@@ -39,8 +39,8 @@
             this.lblTimeLeft = new System.Windows.Forms.Label();
             this.mainNotifier = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuNotifier = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnMenuCancel = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuTimeLeft = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuCancel = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinute)).BeginInit();
             this.menuNotifier.SuspendLayout();
@@ -129,7 +129,7 @@
             this.mainNotifier.ContextMenuStrip = this.menuNotifier;
             this.mainNotifier.Icon = ((System.Drawing.Icon)(resources.GetObject("mainNotifier.Icon")));
             this.mainNotifier.Text = "Hẹn giờ tắt máy";
-            this.mainNotifier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NotifierOnClick);
+            this.mainNotifier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NotifierOnMouseDown);
             // 
             // menuNotifier
             // 
@@ -138,19 +138,20 @@
             this.btnMenuTimeLeft,
             this.btnMenuCancel});
             this.menuNotifier.Name = "menuNotifier";
-            this.menuNotifier.Size = new System.Drawing.Size(250, 52);
-            // 
-            // btnMenuCancel
-            // 
-            this.btnMenuCancel.Name = "btnMenuCancel";
-            this.btnMenuCancel.Size = new System.Drawing.Size(249, 24);
-            this.btnMenuCancel.Text = "Huỷ lệnh tắt máy";
+            this.menuNotifier.Size = new System.Drawing.Size(250, 80);
             // 
             // btnMenuTimeLeft
             // 
             this.btnMenuTimeLeft.Name = "btnMenuTimeLeft";
             this.btnMenuTimeLeft.Size = new System.Drawing.Size(249, 24);
             this.btnMenuTimeLeft.Text = "Thời gian còn lại: 00:00:00";
+            this.btnMenuTimeLeft.Click += new System.EventHandler(this.NotifierTimeLeftOnClick);
+            // 
+            // btnMenuCancel
+            // 
+            this.btnMenuCancel.Name = "btnMenuCancel";
+            this.btnMenuCancel.Size = new System.Drawing.Size(249, 24);
+            this.btnMenuCancel.Text = "Huỷ lệnh tắt máy";
             // 
             // MainView
             // 

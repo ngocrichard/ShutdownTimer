@@ -46,14 +46,17 @@ namespace ShutdownTimer.Views
                 Close();
         }
 
-        // Hiển thị lại form nếu nhấn vào notifier
-        private void NotifierOnClick(object sender, MouseEventArgs e)
+        // Hiển thị lại form
+        private void NotifierOnMouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                Show();
-                Activate();
+                ActivateView();
             }
+        }
+        private void NotifierTimeLeftOnClick(object sender, EventArgs e)
+        {
+            ActivateView();
         }
 
         // Huỷ quyền thoát chương trình khi đang đếm ngược
