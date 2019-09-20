@@ -5,6 +5,6 @@ ShutdownTimer/obj/
 
 ShutdownTimerTest/bin/
 ShutdownTimerTest/obj/
-TestResult/*
+TestResult/
 
-ShutdownTimerInstaller/*
+ShutdownTimerInstaller/
